@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/home5">
+
+    <fragment
+        android:id="@+id/home5"
+        android:name="com.example.UI.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home5_to_profile4"
+            app:destination="@id/profile4"
+            app:enterAnim="@anim/fromleft" />
+        <action
+            android:id="@+id/action_home5_to_setting3"
+            app:destination="@id/setting3"
+            app:enterAnim="@anim/fromleft" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile4"
+        android:name="com.example.UI.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile4_to_home5"
+            app:destination="@id/home5"
+            app:enterAnim="@anim/toright" />
+        <action
+            android:id="@+id/action_profile4_to_setting3"
+            app:destination="@id/setting3"
+            app:enterAnim="@anim/fromleft" />
+    </fragment>
+    <fragment
+        android:id="@+id/setting3"
+        android:name="com.example.UI.Setting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_setting3_to_profile4"
+            app:destination="@id/profile4"
+            app:enterAnim="@anim/toright" />
+        <action
+            android:id="@+id/action_setting3_to_home5"
+            app:destination="@id/home5"
+            app:enterAnim="@anim/toright" />
+    </fragment>
+</navigation>
